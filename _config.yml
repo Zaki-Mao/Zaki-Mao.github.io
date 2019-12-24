@@ -63,8 +63,8 @@ kramdown:
 # Gitalk
 gitalk:
   enable: true    #是否开启Gitalk评论
-  clientID: f2c84e7629bb1446c1a4                            #生成的clientID
-  clientSecret: ca6d6139d1e1b8c43f8b2e19492ddcac8b322d0d    #生成的clientSecret
+  clientID: ae9491ebb04949f74770                           #生成的clientID
+  clientSecret: d20f3baacbdbcc1e847fd6f9382b7d22e206c0dd    #生成的clientSecret
   repo: Zaki-Mao.github.io    #仓库名称
   owner: Zaki-Mao    #github用户名
   admin: Zaki-Mao
@@ -78,8 +78,8 @@ gitalk:
 ba_track_id: f9792c6d6dfbfd179456e254f1273503
 
 # Google Analytics
-ga_track_id: 'UA-90855596-1'            # Format: UA-xxxxxx-xx
-ga_domain: auto             # 默认的是 auto, 这里我是自定义了的域名，你如果没有自己的域名，需要改成auto
+ga_track_id: 'UA-154968860-1'            # Format: UA-xxxxxx-xx
+ga_domain: www.maozunjie.com             # 默认的是 auto, 这里我是自定义了的域名，你如果没有自己的域名，需要改成auto
 
 
 
