@@ -19,7 +19,7 @@ sidebar-avatar: /img/WeChatIMG195.jpg      # use absolute URL, seeing it's used 
 
 # SNS settings
 RSS: false
-weibo_username:     18109408435
+weibo_username:     罗杰斯的红蓝盾牌
 zhihu_username:     昏昏噩噩莫某人
 github_username:    Zaki-Mao
 facebook_username:  Zunjie Mao
@@ -57,8 +57,8 @@ kramdown:
 
 
 # 评论系统
- Disqus（https://disqus.com/）
- disqus_username: maozunjie
+ #Disqus（https://disqus.com/）
+ #disqus_username: maozunjie
 
 # Gitalk
 gitalk:
