@@ -100,11 +100,11 @@ service-worker: true
 # Friends
 friends: [
     {
-        title: "wy",
-        href: "http://zhengwuyang.com"
+        title: "知网",
+        href: "http://www.cnki.net"
     },{
-        title: "简书·BY",
-        href: "http://www.jianshu.com/u/e71990ada2fd"
+        title: "university home",
+        href: "http://www.must.edu.mo"
     },{
         title: "Apple",
         href: "https://apple.com"
