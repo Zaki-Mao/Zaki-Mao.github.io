@@ -63,8 +63,8 @@ kramdown:
 # Gitalk
 gitalk:
   enable: true    #是否开启Gitalk评论
-  clientID: ae9491ebb04949f74770                           #生成的clientID
-  clientSecret: d20f3baacbdbcc1e847fd6f9382b7d22e206c0dd    #生成的clientSecret
+  clientID: e76ef1315dcf00ce02e6                           #生成的clientID
+  clientSecret: 6237d17dc4bbde9b9e1efcbec57819c262d40cd2    #生成的clientSecret
   repo: Zaki-Mao.github.io    #仓库名称
   owner: Zaki-Mao    #github用户名
   admin: Zaki-Mao
