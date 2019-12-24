@@ -1,10 +1,10 @@
 # Site settings
 title: Zaki Blog
-SEOTitle: 遵杰的博客 | Zaki Blog
+SEOTitle: Zaki的博客 | Zaki Blog
 header-img: img/post-bg-desk.jpg
 email: maozunjie.must@gmail.com
-description: "Zaki Blog"
-keyword: "Zaki, Zaki Blog, 遵杰的博客, Maozunjie, 毛遵杰, iOS, Apple, iPhone"
+description: "Meet 2020"
+keyword: "Zaki, Meet 2020, Zaki的博客, Maozunjie, 毛遵杰, iOS, Apple, iPhone"
 url: "http://Zaki-Mao.github.io"          # your host, for absolute URL
 baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
 github_repo: "https://github.com/Zaki-Mao/Zaki-Mao.github.io.git" # you code repository
