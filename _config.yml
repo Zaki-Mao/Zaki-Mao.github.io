@@ -13,7 +13,7 @@ github_repo: "https://github.com/Zaki-Mao/Zaki-Mao.github.io.git" # you code rep
 sidebar: true                           # whether or not using Sidebar.
 sidebar-about-description: "毛遵杰"
 sidebar-about-description: "Living in a good life,meet slowly"
-sidebar-avatar: /img/WeChatIMG195.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
+sidebar-avatar: /img/favicon.ico      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
 
