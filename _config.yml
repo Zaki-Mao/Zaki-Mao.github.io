@@ -100,10 +100,10 @@ service-worker: true
 # Friends
 friends: [
     {
-        title: "知网",
+        title: "中国知网",
         href: "http://www.cnki.net"
     },{
-        title: "university home",
+        title: "university-page",
         href: "http://www.must.edu.mo"
     },{
         title: "Apple",
