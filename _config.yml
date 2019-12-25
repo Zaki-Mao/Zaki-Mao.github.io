@@ -100,11 +100,9 @@ service-worker: true
 
 # Friends
 friends: [
+    
     {
-        title: "中国知网",
-        href: "http://www.cnki.net"
-    },{
-        title: "university-page",
+        title: "Macau UST",
         href: "http://www.must.edu.mo"
     },{
         title: "Apple",
