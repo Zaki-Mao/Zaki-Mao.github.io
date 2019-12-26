@@ -1,0 +1,183 @@
+---
+layout: post
+title: 有关哈希表的归纳总结
+subtitle: A summary of Hash Table
+date: 2019-12-26
+author: Zaki
+header-img: img/post-bg-debug.jpg
+catalog: true
+tags:
+     - data structure
+---
+
+>最近对于哈希表（Hash Table)这一块一直存在比较大的疑问，所以我试图用博客的形式整理整个哈希表的来龙去脉。
+
+# 哈希表
+
+  哈希表里的信息其实是主要分为两部分，一部分则是key,一部分则是value。
+  
+  哈希表是需要某种线索并且包含某种含义，这种过程就像是你知道了某条线索，然后顺着线索得到了这条线索的信息。
+  
+  通俗的来讲，如果把我的名字比如“Zaki”给到了key值，我的电活号码则是value,也就是说，如果知道了key（也就是我的名字），我们就可以知道value。
+  
+ 我们在这里把key和value对应了起来。那么现在我们可以通过绘制数组的形式来探讨一下。
+ 
+ 举个简单例子，我们绘制一串数组，并且它们的index依次为0，1，2，3，4
+ 
+ ![](https://tva1.sinaimg.cn/large/006tNbRwly1gaak8yw0qdj30d3067wei.jpg)
+ 
+ 正如前提到的，我们要把线索（我的名字）和信息（我的号码）做一个对应，那么我们就要用一种函数的形式把它表示出来，这就是哈希函数（Hash Function)。
+ 
+ 哈希函数的作用就类似于去定位一个特殊的线索，评估它然后生成某个特定的index数字，然后它会告诉我们，这个信息在数组的哪个位置储存。
+ 
+ 我们可以认为哈希函数的工作是如下面所示
+ 
+ ####指令
+ 
+       Hash(key)->index
+       
+ 接着上面那个例子，我们可以将它假设，我的名字和号码在哈希函数中所生成的index为3
+ 
+ ####指令
+       Hash(Zaki)->3
+      
+ 那么我的名字和号码现在就去到了数组index为3的位置，值得注意的是，哈希函数对于它的key，都是唯一的，也就是说，无论我什么时候输入Key(我的名字)，哈希函数所运行
+ 出来的index都会是3，永远不会变。
+ 
+ 那么现在如果用*来表示我的名字和号码，它现在被储存到了3这个位置。
+ 
+ ![](https://tva1.sinaimg.cn/large/006tNbRwly1gaak9uvp9jj30cu05tgln.jpg)
+ 
+同样的，如果有另一个人steve,假设他的哈希值为2，那么如果用¥来表示他的位置，他的名字和号码会被储存到数组index为2的位置。
+
+![](https://tva1.sinaimg.cn/large/006tNbRwly1gaakagz57bj30c306374c.jpg)
+
+那么这儿会产生一个问题，如果有一人，假设他为stark好了，我们用$来表示，stark的哈希值计算出来也为3，也就是会和Zaki在数组中的位置有一个冲突，这时应该怎么办？
+
+这儿处理冲突的方法其实有很多种。
+
+# 处理冲突的方法
+
+首先有一种方法是开放定址法。这种方法就是当一个地址已经被占用的情况下，我们一次让它继续加1，加2一直这样寻找，也就是用一个增量的方式来寻找，这种我们叫线性探测
+再散列（Linear Probing)。当然了还有一种二次探测再散列则是先加1再减1，先加4再减4这种形式。
+
+回到那个例子，既然stark的哈希值已经被Zaki所占用了，那么我们先让他的哈希值增量为1，即移动到下一个数组元素位置（即index为4的位置），这里没有被占用，则stark被储存
+在这里。
+
+![](https://tva1.sinaimg.cn/large/006tNbRwly1gaakaypz5lj30d906kmx8.jpg)
+
+第二种方法则为链地址法。之前说的方法是stark的哈希值为3但是已经被占用了，链地址法不同于开放地址法用增量的形式，它会在冲突的位置，继续创造一个链。也就是说，这种方法是
+将所有冲突值储存在同一线性链表中。那么stark的哈希值则会在Zaki的位置向下延伸，创造一条新链，而Stark的信息则被储存在那里。
+
+![](https://tva1.sinaimg.cn/large/006tNbRwly1gaakbgghq2j30ck08wmxa.jpg)
+
+第三种方法则是公共溢出区法，这种方法是先来的先占位置，后来冲突的部分则被保存到公共溢出区等待。比如我们认为index 5-6为公共溢出区，那么Stark的信息将会被保存到公共溢出区
+即先保存到index为5的位置上。
+
+![](https://tva1.sinaimg.cn/large/006tNbRwly1gaakbtzcv3j30gv05vq31.jpg)
+
+
+上面则是自己简单的一个哈希表对应冲突三种不同方法的例子，下面是链地址法的代码。
+
+# Chaining Operations Code
+
+####指令
+    
+     struct ListNode;
+     typedef struct ListNode *Position;
+     struct HashTbl;
+     typedef struct HashTbl *HashTable;
+     
+     HashTable initializeTable(int Tablesize);
+     void DestoyTable(HashTable H);
+     Position find(ElementType Key,HashTable H);
+     void Insert(ElementType Key,HashTable H);
+     ElementType Retrieve(position P);
+     
+     #define MinTableSize(10)
+     struct ListNode
+     {
+       ElementType Element;
+       Position Next;
+     };
+     typedef Position List;
+     struct HashTbl
+     {
+     int TableSize;
+     List *TheLists;
+     };
+     
+ 
+####指令
+     
+     HashTable InitializeTable(int TableSize) //哈希表初始化
+     {
+     HashTable H;
+     int i;
+     if(TableSize < MinTablesize)
+     {
+     Error("Table size too small); 
+     return NULL;
+     }
+     
+     H=malloc(sizeof(struct HashTbl));
+     if (H==NULL)
+      FatalError("out of space!!!);
+      
+     H->TableSize=NextPrime(TableSize);
+     
+     H->TheLists=malloc(sizeof(List)*H->TableSize);
+     if(H->TheLists==NULL)
+     FataError("Out of space!!!);
+     
+     for(i=0;i<H->TableSize;i++)
+     {
+      H->TheLists[i]=malloc(sizeof(struct ListNode));
+      if(H->TheLists[i]==NULL)
+       FataError("out of space!!!);
+      else
+       H->TheLists[i]->Next=NULL;
+      }
+      return H;
+      }
+      
+####指令
+
+    PositionFind(ElementType Key,HashTable H)
+    {
+     Position P:
+     List L;
+     L=H->TheLists[Hash(Key,H->TableSize)];
+     P=L->Next;
+     while(P!=NULL&&P->Element!=Key)
+      P=P->Next;
+     return P;
+     
+   }
+   
+####指令
+   
+   void Insert(ElementType Key,HashTable H)
+   Position Pos,NewCell;
+   List L;
+   
+   Pos=Find(Key,H);
+   if (Pos==NULL)
+   Newcell=malloc(sizeof(struct ListNode));
+   if (Newcell==NULL)
+    FatalError("out of space!!!);
+   else
+   {
+     L=H->TheLists[Hash(Key,H->TableSize)];
+     NewCell->Next=L->Next;
+     Newcell->Element=Key;
+     L->Next=Newcell;
+    }
+  }
+}
+
+
+
+
+ 
+ 
