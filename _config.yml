@@ -102,9 +102,8 @@ service-worker: true
 friends: [
     {
        title: "Bobwang",
-    }
-    
-    {
+       
+    },{
         title: "Macau UST",
         href: "http://www.must.edu.mo"
     },{
