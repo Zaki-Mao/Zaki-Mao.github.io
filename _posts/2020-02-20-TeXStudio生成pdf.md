@@ -2,7 +2,7 @@
 layout: post
 title: 更新：TXS“编译失败”及pdf无法生成的问题
 subtitle: Update："Build&view" compile failed on TXS and pdf file save failed.
-date: 2019-02-20
+date: 2020-02-20
 author: Zaki
 header-img: img/home-bg-o.jpg
 catalog: true
