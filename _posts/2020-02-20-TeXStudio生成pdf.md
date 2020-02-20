@@ -37,10 +37,13 @@ TeX distribution: texlive
 
 #### warning
 
+
       "Could not start Build & View:PdfLaTeX:
       pdflatex -synctex=1 -interaction=nonstopmode "my pdf file ".tex."
 
+
 # 问题解决
+
 
 后来我便在github中<strong>TeXStudio-org/TeXStudio</strong>里的<a href="https://github.com/texstudio-org/texstudio/issues">issue</a>中寻求帮助。
 
@@ -50,7 +53,7 @@ TeX distribution: texlive
 
 也就是在mac的终端里敲如下指令看是否编译成功
 
-####
+#### 指令
 
      pdflatex -synctex=1 -interaction=nonstopmode <name of your tex file>
      
@@ -58,9 +61,12 @@ TeX distribution: texlive
 
 依次确保以下信息被勾选
 
-默认编译器： XeLateX</p>
-默认认查看器 ： PDf查看器</p>
+默认编译器： XeLateX
+
+默认认查看器 ： PDf查看器
+
 PD查看器内置： PDF查看器(内嵌)
+
 
 # 生成PDF无法打开的情况
 
@@ -68,9 +74,12 @@ PD查看器内置： PDF查看器(内嵌)
 
 #### Error如下
 
+
       “无法打开。它可能已损坏，或者可能使用了“预览”无法识别的文件格式”
+      
 
 # 问题解决
+
 
 对于文档损坏或应用无法打开的情况，按“标准解决方案”，应该是
 
@@ -78,9 +87,10 @@ PD查看器内置： PDF查看器(内嵌)
 
 MacOS 10.12及以上用户可能没有这个选项。在终端敲击以下指令输入密码回车即可。
 
-####
+#### 指令
 
       sudo spctl --master-disable
+      
       
 而即便我在TexStudio切换到了tools-command-PDFLaTeX，可最终还是碰到了一点问题。结果就是我发现确保了一切工作之后还是无法生成。
 
