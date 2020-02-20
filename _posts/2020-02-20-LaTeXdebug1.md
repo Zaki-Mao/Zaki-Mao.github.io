@@ -19,9 +19,12 @@ tags:
 
 <strong>Environment</strong>
 
-TeXstudio: 2.12.14 (git 2.12.14)</p>
-Qt: 5.11.2</p>
-OS: MacOS</p>
+TeXstudio: 2.12.14 (git 2.12.14)
+
+Qt: 5.11.2
+
+OS: MacOS
+
 TeX distribution: texlive
 
 
@@ -41,7 +44,8 @@ TeX distribution: texlive
       \centerline{ ... } \\
       \end{...} \\
       \section{..} \\
-      
+ 
+ 
  # 问题解决
  
  在上述情形下使用\\一般是为了插入一个空行。因此可以输入一个空格(\quad), 此时光标已经到了下一行，然后再终止该行
