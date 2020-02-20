@@ -23,9 +23,12 @@ tags:
 
 <strong>Environment</strong>
 
-TeXstudio: 2.12.14 (git 2.12.14)</p>
-Qt: 5.11.2</p>
-OS: MacOS</p>
+TeXstudio: 2.12.14 (git 2.12.14)
+
+Qt: 5.11.2
+
+OS: MacOS
+
 TeX distribution: texlive
 
 <strong>TeXStudio编译失败的问题</strong>
