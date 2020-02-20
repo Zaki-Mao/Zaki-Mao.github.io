@@ -1,18 +1,17 @@
 ---
-
 layout: post
-title: 更新：TeXStudio无法编译的问题以及无法生成pdf文件的问题
-subtitle: Update: "Build&View" compile failed on TXS and pdf file build failed
-date: 2020-02-20
+title: 更新：TXS“编译失败”及pdf无法生成的问题
+subtitle: Update："Build&view" compile failed on TXS and pdf file save failed.
+date: 2019-02-20
 author: Zaki
 header-img: img/home-bg-o.jpg
 catalog: true
 tags:
      - LaTeX
      - Mac
-     - Debug
      - 效率
-
+     - 终端
+     - Debug
 ---
 
 
