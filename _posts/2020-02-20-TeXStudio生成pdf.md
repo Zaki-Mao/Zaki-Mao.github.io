@@ -1,4 +1,5 @@
 ---
+
 layout: post
 title: 更新：TeXStudio无法编译的问题以及无法生成pdf文件的问题
 subtitle: Update: "Build&View" compile failed on TXS and pdf file build failed
@@ -10,8 +11,10 @@ tags:
      - LaTeX
      - Mac
      - Debug
-     -效率
+     - 效率
+
 ---
+
 
 
 
