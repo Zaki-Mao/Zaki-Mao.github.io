@@ -204,7 +204,11 @@ By writing a value into that file, we can change the screen brightness. Your fir
     open: Permission denied
     
     
-This error may come as a surprise. After all, we ran the command with sudo! This is an important thing to know about the shell. Operations like |, >, and < are done by the shell, not by the individual program. echo and friends do not “know” about |. They just read from their input and write to their output, whatever it may be. In the case above, the shell (which is authenticated just as your user) tries to open the brightness file for writing, before setting that as sudo echo’s output, but is prevented from doing so since the shell does not run as root. Using this knowledge, we can work around this:
+  This error may come as a surprise. After all, we ran the command with sudo! This is an important thing to know about the shell. 
+  
+  Operations like |, >, and < are done by the shell, not by the individual program. echo and friends do not “know” about |. They just read from their input and write to their output, whatever it may be. 
+  
+  In the case above, the shell (which is authenticated just as your user) tries to open the brightness file for writing, before setting that as sudo echo’s output, but is prevented from doing so since the shell does not run as root. Using this knowledge, we can work around this:
 
 ####
 
