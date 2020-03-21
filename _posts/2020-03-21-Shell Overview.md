@@ -39,6 +39,7 @@ When you launch your terminal, you will see a prompt that often looks a little l
 This is the main textual interface to the shell. It tells you that you are on the machine missing and that your “current working directory”, or where you currently are, is ~ (short for “home”). The $ tells you that you are not the root user (more on that later). At this prompt you can type a command, which will then be interpreted by the shell. The most basic command is to execute a program:
 
 #### 
+
        missing:~$ date
        Fri 10 Jan 2020 11:49:31 AM EST
        missing:~$ 
@@ -48,6 +49,7 @@ Here, we executed the date program, which (perhaps unsurprisingly) prints the cu
 
 
 #### 
+
         missing:~$ echo hello
         hello
         
@@ -57,6 +59,7 @@ But how does the shell know how to find the date or echo programs? Well, the she
 
 
 #### 
+
       missing:~$ echo $PATH
       /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
       missing:~$ which echo
@@ -74,6 +77,8 @@ A path on the shell is a delimited list of directories; separated by / on Linux 
 
 
 ####
+
+
      missing:~$ pwd
      /home/missing
      missing:~$ cd /home
@@ -100,6 +105,8 @@ In general, when we run a program, it will operate in the current directory unle
 To see what lives in a given directory, we use the ls command:
 
 ####
+
+
      missing:~$ ls
      missing:~$ cd ..
      missing:/home$ ls
@@ -132,6 +139,8 @@ If you ever want more information about a program’s arguments, inputs, outputs
 
 
 ####
+
+
     missing:~$ man ls
     
     
@@ -143,6 +152,8 @@ In the shell, programs have two primary “streams” associated with them: thei
 The simplest form of redirection is < file and > file. These let you rewire the input and output streams of a program to a file respectively:
 
 ####
+
+
      missing:~$ echo hello > hello.txt
      missing:~$ cat hello.txt
      hello
@@ -155,6 +166,8 @@ The simplest form of redirection is < file and > file. These let you rewire the 
 You can also use >> to append to a file. Where this kind of input/output redirection really shines is in the use of pipes. The | operator lets you “chain” programs such that the output of one is the input of another:
 
 ####
+
+
     missing:~$ ls -l / | tail -n1
     drwxr-xr-x 1 root  root  4096 Jun 20  2019 var
     missing:~$ curl --head --silent google.com | grep --ignore-case content-length | cut --delimiter=' ' -f2
