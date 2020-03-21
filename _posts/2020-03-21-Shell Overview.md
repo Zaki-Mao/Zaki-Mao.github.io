@@ -33,6 +33,7 @@ When you launch your terminal, you will see a prompt that often looks a little l
 
 
 #### 
+
      missing:~$ 
      
 This is the main textual interface to the shell. It tells you that you are on the machine missing and that your “current working directory”, or where you currently are, is ~ (short for “home”). The $ tells you that you are not the root user (more on that later). At this prompt you can type a command, which will then be interpreted by the shell. The most basic command is to execute a program:
@@ -133,6 +134,7 @@ If you ever want more information about a program’s arguments, inputs, outputs
 ####
     missing:~$ man ls
     
+    
 # Connecting programs
    
 
@@ -172,6 +174,7 @@ One thing you need to be root in order to do is writing to the sysfs file system
 For example, the brightness of your laptop’s screen is exposed through a file called brightness under
 
 ####
+
      /sys/class/backlight
  
  
@@ -179,6 +182,7 @@ By writing a value into that file, we can change the screen brightness. Your fir
 
 
 ####
+
     $ sudo find -L /sys/class/backlight -maxdepth 2 -name '*brightness*'
     /sys/class/backlight/thinkpad_screen/brightness
     $ cd /sys/class/backlight/thinkpad_screen
@@ -190,11 +194,13 @@ By writing a value into that file, we can change the screen brightness. Your fir
 This error may come as a surprise. After all, we ran the command with sudo! This is an important thing to know about the shell. Operations like |, >, and < are done by the shell, not by the individual program. echo and friends do not “know” about |. They just read from their input and write to their output, whatever it may be. In the case above, the shell (which is authenticated just as your user) tries to open the brightness file for writing, before setting that as sudo echo’s output, but is prevented from doing so since the shell does not run as root. Using this knowledge, we can work around this:
 
 ####
+
     $ echo 3 | sudo tee brightness
     
 Since the tee program is the one to open the /sys file for writing, and it is running as root, the permissions all work out. You can control all sorts of fun and useful things through /sys, such as the state of various system LEDs (your path might be different):
 
 ####
+
     $ echo 1 | sudo tee /sys/class/leds/input6::scrolllock/brightness
    
    
