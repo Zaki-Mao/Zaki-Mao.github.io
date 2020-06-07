@@ -4,7 +4,7 @@ title: 肝期末报告中LaTeX使用的总结
 subtitle: Summary of LaTeX use in the final report
 date: 2020-06-07
 author: Zaki
-header-img: img/post-bg-re-vs-ng2.jpg
+header-img: img/LaTeX.png
 catalog: true
 tags:
      - LaTeX
