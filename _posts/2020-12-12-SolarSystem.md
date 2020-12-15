@@ -18,7 +18,7 @@ tags:
 
 This project mainly illustrates the implementaion of solar system by using OpenGL, The report is divided into two main parts, Part one contains the design of the program, the output, and an explanation of some of the code; Part two is my comments and summary. The purpose of the program is to simulate the orbital diagram of a complete solar system with eight planets, including the rotation of the planets. The focus of the experiment is on how to integrate a complete solar system program from matrix stack, sphere drawing, texture mapping, ADS lighting, etc. using what we learned in class.
 
-The whole program has been successfully complied on \textbf{Visual Studio 2017} (Version 15)  Win 32 with \textbf{OpenGL} (version 4.3). 
+The whole program has been successfully complied on <strong>Visual Studio 2017</strong> (Version 15)  Win 32 with <strong>OpenGL</strong> (version 4.3). 
 
 # Design of Solar System
 
