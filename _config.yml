@@ -3,11 +3,11 @@ title: Zaki Blog
 SEOTitle: Zaki的博客 | Zaki Blog
 header-img: img/homepage1.jpg
 email: hi@maozunjie.com
-description: Meet 2021
+description: "Meet2021"
 description: "copyright@zaki"
-keyword: "Zaki, Meet 2021,Zaki的博客, Maozunjie, 毛遵杰, iOS, Apple, iPhone"
+keyword: "Zaki, Meet2021,Zaki的博客, Maozunjie, 毛遵杰, iOS, Apple, iPhone"
 url: "http://Zaki-Mao.github.io"          # your host, for absolute URL
-baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
+baseurl: "blog"      # for example, '/blog' if your blog hosted on 'host/blog'
 github_repo: "https://github.com/Zaki-Mao/Zaki-Mao.github.io.git" # you code repository
 
 # Sidebar settings
