@@ -2,7 +2,7 @@
 layout: post
 title: Getpid()函数和fork()函数的解释
 subtitle: CO003 Operating System Basic Process Management leture note
-date: 2021-01-19
+date: 2021-01-20
 author: Zaki
 header-img: img/home-bg-o.jpg
 catalog: true
