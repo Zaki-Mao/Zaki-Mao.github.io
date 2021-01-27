@@ -15,7 +15,7 @@ tags:
 
 >   链路层同样非常重要，它有着承上启下的作用。
 
- # Function
+# Function
   
 The data link layer provides reliable transmission of data across a physical link, thus it concerns with media access, physical addressing, network topology, error notification, ordered delivery of frames, and flow control. 
 
